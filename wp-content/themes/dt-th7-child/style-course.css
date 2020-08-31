@@ -8,7 +8,6 @@ p{
 .grid_wrapper{
     display: grid;
     grid-template-columns: 2fr 10fr;
-    height: 100vh;
     width: 100vw;
 }
 
@@ -30,10 +29,6 @@ p{
 
 .next{
     text-align:right;
-}
-
-.prev{
-
 }
 
 .course_video_content{
@@ -71,7 +66,7 @@ p{
 
 .sidebar{
     background: transparent;
-    background: url(https://betterthansuccess.com/wp-content/uploads/2020/08/BTS_member_sidebar_bkground.png) no-repeat center top;
+    background: url(https://betterthansuccess.com/wp-content/uploads/2020/08/BTS_sidebar_bkground_2.png) no-repeat center top;
     min-width:240px;
     min-height: 940px;
     grid-area: auto;
@@ -300,13 +295,7 @@ ul.menu{
     text-align: center;
 }
 
-/*.single_course .course-content p,
-.single_course .course-content ul li {
-    color: #4b4b4b;
-}*/
-
-.single_course .course-content ul li:before,
-.learndash_post_sfwd-lessons .learndash_content ul li:before {
+.single_course .course-content ul li:before {
     content: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABfUlEQVQ4jYXTOWuWQRQF4MePzwVE/QFRCBKtLcSlck0ZTBXEQhAVLLS201ax1EJxKcUICdpoEddGURCsxcItdoILiljJgfuGIb6YAwMzd+65c+fMmWVn7k1YhB04hnGM1NY8HuAanrfpg2a+FjfxEL9wBBtrZP4Tc7iFdR1p2JAfF3FzndjiAx7hXBV4gt341nVwucj7esgtPmM/fuBK18F2TGIT/vyHHBzGDA7iDXYOSrDrS5wcnMIFLK9OboQ7KLXvLkHehfOYwteK3cl1BvVUb5vkLVjTrDfgNk7jaRMPZ2ToXyRxNQ5gJWZxHxf7WhvW3cfwrmIn8QpnMVqxEz3ciD4/LHNMltOCL7V+Vs+1Fb97CqTDuRS4WsaIST7V5mtMlGAfe8jR7Sj2RsSXpeg0VjRJsXSushjJiRvzci86J+aO6SZ2Xt8nViF7sfSqTpeuwPfyw/ty2KWybETMyDyx7OVfxPLhLHymrsghbMPx+rrtd47Ye9L2AgN/ASsKVHuSUf6hAAAAAElFTkSuQmCC);
     margin-right: 10px;
     vertical-align: text-top;
@@ -387,21 +376,6 @@ ul.menu{
     margin: 2% 0;
 }
 
-
-
-.ld-course-progress-content-container > div {
-    padding: 4% 2%;
-    border-bottom: 1px solid #ddd;
-}
-/*.ld_course_info {
-    display: block;
-    overflow: visible;
-    justify-content: center;
-    margin: 40px auto;
-    max-width: 90%;
-}*/
-
-
 .student_progress_header {
     display: flex;
 }
@@ -416,7 +390,7 @@ ul.menu{
 
 .sidebar .menu img {
     width: 50%;
-    max-width: 150px;
+    max-width: 122px;
 }
 
 .student_progress_header .student_profile_info {
@@ -429,96 +403,6 @@ ul.menu{
     margin-top: 0;
 }
 
-.page-template-page-allstudents-progress .course_progress_details {
-    max-width: 95%;
-    margin: 4% auto;
-}
-
-.page-template-page-allstudents-progress .allstudent_lesson_list,
-.page-template-page-allstudents-progress .leardash-course-status {
-    line-height: 1.4;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #4b4b4b;
-    font-weight: 100;
-}
-
-.page-template-page-allstudents-progress .allstudent_lesson_list {
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-.page-template-page-allstudents-progress .allstudent_lesson_list .completed {
-    line-height: initial;
-}
-
-.page-template-page-allstudents-progress .leardash-course-status-completed {
-    color: green;
-}
-
-.page-template-page-allstudents-progress img {
-    border-radius: 50%;
-}
-
-.wistia_responsive_padding {
-    position: relative;
-    margin-bottom: 10%;
-}
-
-.wistia_responsive_padding > .wistia_responsive_wrapper {
-    left: 50% !important;
-    top: 60% !important;
-    width: 90% !important;
-    transform: translate(-50%, -50%);
-}
-
-
-/*.learndash_topic_materials > p > a:before,
-.learndash_lesson_materials > p > a:before {
-    margin-right: 10px;
-    vertical-align: text-top;
-    content: url(M775,928.008l-5.011,2.972-4.977,3.032,0.033-6-0.033-6,4.977,3.032Z);
-}*/
-
-.learndash_topic_materials h4,
-.learndash_lesson_materials h4 {
-    background-color: #1ca1ff;
-    color: #ffffff;
-    padding: 10px;
-    line-height: 1.75;
-}
-
-.learndash_topic_materials h4 > span,
-.learndash_lesson_materials h4 > span {
-    background-image: url('https://fixyourfrontdesk.com/wp-content/uploads/2020/06/download_icon.png');
-    background-repeat: no-repeat;
-    padding: 0 20px;
-}
-
-#learndash_complete_prerequisites {
-    background-color: #ffffff;
-    color: #273935;
-}
-
-#learndash_complete_prerequisites > a {
-    line-height: 2em;
-    font-size: 16px;
-    font-weight: 300;
-    margin-left: 10px;
-    vertical-align: middle;
-}
-
-.arrow_down {
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 13px solid #ffffff;
-    display: inline-block;
-    margin-left: 10px;
-}
-
 .arrow_right {
     width: 0;
     height: 0;
@@ -529,16 +413,6 @@ ul.menu{
     margin-left: 10px;
 }
 
-.arrow_left {
-    width: 0;
-    height: 0;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    border-right: 11px solid #ffffff;
-    display: inline-block;
-    margin-right: 10px;
-}
-
 @media screen and (max-width: 1500px ) {
     .course_info {
         width: 100%;
@@ -547,7 +421,6 @@ ul.menu{
 
 @media screen and (max-width: 1100px) {
     .course_info {
-/*        width: 95%;*/
         flex-direction: column;
     }
 
@@ -569,12 +442,10 @@ ul.menu{
 
     .sidebar{
         display: none;
-        /*position: fixed;*/
         top: -15px;
         z-index: 60;
         width: 100%;
         overflow-y: scroll;
-        /*background-color: #014991;*/
         background: rgba(1,73,145,1);
         background: -moz-linear-gradient(top, rgba(1,73,145,1) 0%, rgba(88,129,179,1) 35%, rgba(29,146,205,1) 65%, rgba(2,183,230,1) 100%);
         background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(1,73,145,1)), color-stop(35%, rgba(88,129,179,1)), color-stop(65%, rgba(29,146,205,1)), color-stop(100%, rgba(2,183,230,1)));
@@ -583,7 +454,6 @@ ul.menu{
         background: -ms-linear-gradient(top, rgba(1,73,145,1) 0%, rgba(88,129,179,1) 35%, rgba(29,146,205,1) 65%, rgba(2,183,230,1) 100%);
         background: linear-gradient(to bottom, rgba(1,73,145,1) 0%, rgba(88,129,179,1) 35%, rgba(29,146,205,1) 65%, rgba(2,183,230,1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#014991', endColorstr='#02b7e6', GradientType=0 );
-        /*background-image: none;*/
     }
 
     .sidebar.open{

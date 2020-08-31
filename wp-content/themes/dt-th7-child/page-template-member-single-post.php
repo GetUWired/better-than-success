@@ -15,26 +15,18 @@ $post_id = $_GET['post_id'];
 $title = get_the_title($post_id);
 
 $current_post = get_post($post_id);
-// echo "<pre>";
-// var_dump($stuff);
 
-// echo "</pre>";
-
-// $content = get_the_content($post_id);
 $content = $current_post->post_content;
 
-// echo $content;
-
-// print_r($content);
 
 ?>
 
 <div class="main-content">
     <div class="title">
-        <h3>My Courses</h3>
+        <h3>BTS Mastermind and Lecture Recordings</h3>
 
         <div class="post-title main-title">
-            <p style="display: block;"><a href="<?php get_template_directory_uri(); ?>/member-dashboard">Dashboard > </a><a href="<?php get_template_directory_uri(); ?>/bts-realestate-league-member-courses-roll">My Courses > </a><?php echo $title; ?>
+            <p style="display: block;"><a href="<?php get_template_directory_uri(); ?>/membership-dashboard">Dashboard > </a><a href="<?php get_template_directory_uri(); ?>/bts-realestate-league-member-courses-roll">BTS Mastermind and Lecture Recordings > </a><?php echo $title; ?>
         	</p>
         </div>
 

@@ -42,10 +42,11 @@
 }
 
 html {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    overflow-x: hidden;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -54,7 +55,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -62,7 +63,6 @@ body {
     text-align: left;
     background-color: #FFFFFF;
     overflow-x:hidden;
-    /*height: auto;*/
 }
 
 body#membership-site {
@@ -71,14 +71,12 @@ body#membership-site {
     background-repeat: no-repeat;
     flex-wrap: inherit;
     font-family: 'Montserrat', sans-serif;
-    /*background-size: cover;*/
     background-position: top;
 }
 
 body#membership-site .logo {
     background: url(https://betterthansuccess.com/wp-content/uploads/2020/08/BTS_logo.png) 50% 50% no-repeat transparent;
     height: 150px;
-    /*width: 100%;*/
     width: 240px;
 }
 
@@ -99,10 +97,13 @@ body#membership-site #membership-menu {
 body#membership-site .menu > img {
     display: block;
     margin: 1rem auto !important;
+    max-height: 122px;
 }
 
 body#membership-site .menu > p {
     margin-bottom: 2rem;
+    text-align: center !important;
+    color: #ffffff !important;
 }
 
 body#membership-site #menuToggle,
@@ -111,6 +112,7 @@ body#membership-site #menuToggle2 {
     background-color: transparent;
     color: #273935;
     display: none;
+    padding: 7px;
 }
 
 body#membership-site #menuToggle:focus,
@@ -122,11 +124,11 @@ body#membership-site #menuToggle2:active {
 }
 
 body#membership-site #menuToggle i {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 body#membership-site #menuToggle2 i.fa-times {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 body#membership-site header #site-navigation > img {
@@ -195,7 +197,6 @@ body#membership-site .tech_support a:hover {
     text-decoration: none;
 }
 
-
 @media (min-width: 901px) {
     body#membership-site .container-fluid #menu-wrapper {
         display: flex;
@@ -240,15 +241,13 @@ body#membership-site .main-content {
     padding:4% 0 0 2%;
 }
 
+body#membership-site.page-id-54646 .main-content,
 body#membership-site.page-id-54756 .main-content,
 body#membership-site.page-id-54684 .main-content,
-body#membership-site.page-id-54745 .main-content {
+body#membership-site.page-id-54745 .main-content,
+body.page-template-page-template-member-single-post .main-content {
     padding: 0 0 0 2%;
 }   
-
-body#membership-site .main-content {
-
-}
 
 body#membership-site .banner {
     /*border: 1px solid red;*/
@@ -279,46 +278,12 @@ body#membership-site .banner > div {
     margin: 2rem 0;
 }
 
-/*.page-id-6995 .grid_wrapper > p:first-of-type,
-.page-id-1628 .grid_wrapper > p:first-of-type,
-.page-id-6844 .grid_wrapper > p:first-of-type,
-.page-id-6846 .grid_wrapper > p:first-of-type,
-.page-id-6848 .grid_wrapper > p:first-of-type,
-.page-id-1703 .grid_wrapper > p:first-of-type,
-.page-id-6970 .grid_wrapper > p:first-of-type,
-.page-id-6973 .grid_wrapper > p:first-of-type,
-.page-id-7506 .grid_wrapper > p:first-of-type,
-.page-id-7503 .grid_wrapper > p:first-of-type {
-    display: none;
-}*/
-
-
-#memberium-shortcode-blocks .row .col-sm-6 > ul > li > .arrow_right {
-    border-left: 11px solid #79c140;
-    margin-right: 10px;
-}
-
-#learndash_lesson_materials > p > a {
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-.page-id-6970 .grid_wrapper > p
-.page-id-6973 .grid_wrapper > p {
-    font-size: 24px;
-}
-
 .banner h3,
-.title h3,
-.billing_history h2 {
+.title h3 {
     font-size: 35px;
-/*    font-family: 'Roboto', sans-serif;*/
     font-family: 'Playfair Display', serif;
-/*    font-weight: 300;
-    color: #393939;*/
     font-weight: 700;
     color: #3f4252;
-    /*text-transform: uppercase;*/
     margin-bottom: 1%;
 }
 
@@ -326,7 +291,7 @@ body#membership-site .banner > div {
     margin-bottom: 2%
 }
 
-.banner > div > a {
+.banner > div a {
     max-width: 50%;
     margin: 1.2rem 0 0;
     color: #ffffff;
@@ -334,6 +299,14 @@ body#membership-site .banner > div {
     padding: 10px 25px;
     border-radius: 25px;
     text-transform: uppercase;
+    border: 2px solid #df7567;
+    cursor: pointer;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.banner > div a:hover {
+    color: #df7567 !important;
+    background-color: #ffffff;
 }
 
 .graphic_blocks {
@@ -355,53 +328,6 @@ body#membership-site .banner > div {
     justify-content: flex-start;
 }
 
-/*.ld_course_info_mycourses_list, 
-.course_progress_details,*/
-/*.page-template-page-allstudents-progress .ld_course_info,*/
-.memberium-c-box, .memberium-c-box-100 {
-    max-width: 65%;
-    height: auto;
-    padding: 4%;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 8px 5px rgba(209,209,209,1);
-    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-    border-radius: 4px 4px 4px 4px;
-    border: 1px solid #d1d1d1;
-}
-
-.course_progress_details {
-    max-width: 85%;
-}
-
-.ld_course_info_mycourses_list {
-    max-width: 85%;
-    margin-bottom: 4%;
-}
-
-.ld_course_info_mycourses_list h4,
-.course_progress_details h4 {
-    margin-bottom: 10px;
-}
-
-.ld-course-info-my-courses {
-    line-height: 2.2rem;
-    border-bottom: 1px solid #ddd;
-}
-
-.course_progress_details .ld-course-progress-content-container .learndash-profile-course-title {
-
-}
-
-.enroll_child_user {
-    width:80%;
-    min-width: 320px;
-    max-width: 750px;
-}
-
-.enroll_child_user form {
-    padding: 2%;
-}
-
 @media screen and (max-width: 1579px) {
 
     .graphic_blocks {
@@ -410,7 +336,6 @@ body#membership-site .banner > div {
 }
 
 @media screen and (max-width: 1479px) {
-/*    .graphic_blocks,*/
     .body#membership-site .banner {
         max-width: 93%;
     }
@@ -423,19 +348,21 @@ body#membership-site .banner > div {
 }
 
 @media screen and (max-width: 900px) {
-    .page-template-course-blog-roll .grid_wrapper .main-content ul.graphic_blocks {
+    .graphic_blocks {
         justify-content: center;
+        margin: 0 auto;
     }
 }
 
 @media screen and (max-width: 665px) {
     
-    .graphic_blocks,
-    .page-template-course-blog-roll .grid_wrapper .main-content ul.graphic_blocks {
-        justify-content: center;
+    .graphic_blocks {
         max-width: 80%;
+        margin: 0 auto;
     }
 }
+
+
 
 @media screen and (max-width: 575px) {
     .memberium-c-box-100 {
@@ -445,7 +372,158 @@ body#membership-site .banner > div {
 
 }
 
-.page-template-page-allstudents-progress .ld_course_info,
+body.page-template-page-template-member-basic .main-content h3 {
+    font-size: 1.75rem;
+    margin: 2% 0;
+    font-family: 'Playfair display', serif;
+}
+
+body.page-template-page-template-member-basic .woocommerce-MyAccount-navigation > ul li.is-active, 
+body.page-template-page-template-member-basic .woocommerce-MyAccount-navigation > ul li.is-active:hover {
+    background-color: #1d92cd;
+}
+
+body.page-template-page-template-member-basic .woocommerce-MyAccount-navigation > ul li:not(.is-active), 
+body.page-template-page-template-member-basic .woocommerce-MyAccount-navigation > ul li:not(.is-active):hover {
+    background-color: #9dbe42;
+
+}
+
+body.page-template-page-template-member-basic .woocommerce-MyAccount-navigation > ul li {
+    border-radius: 20px;
+    text-align: center;
+}
+
+body.page-template-page-template-member-basic .woocommerce-MyAccount-navigation > ul li a {
+    color: #ffffff;
+}
+
+body.page-template-page-template-member-basic .woocommerce-MyAccount-navigation > ul li a:hover {
+    color: #ffffff;
+}
+.accent-gradient .woocommerce-MyAccount-navigation > ul li:not(.is-active) a:hover,
+body.page-template-page-template-member-basic .accent-gradient .woocommerce-MyAccount-navigation > ul li:not(.is-active) a:hover {
+    color: #ffffff;
+    background: transparent !important;
+}
+
+body.page-template-page-template-member-basic .woocommerce .woocommerce-MyAccount-content,
+body.page-template-page-template-member-basic .woocommerce-account .woocommerce-MyAccount-content {
+    width: 50%;
+    float: left;
+    padding: 2%;
+    background-color: #ffffffdd;
+    border-radius: 25px;
+    margin: 0 2%;
+    -webkit-box-shadow: 0px 0px 8px 5px rgba(209,209,209,1);
+    -moz-box-shadow: 0px 0px 8px 5px rgba(209,209,209,1);
+    box-shadow: 0px 0px 8px 5px rgba(209,209,209,1);
+    border: 1px solid #d1d1d1;
+}
+
+body.page-template-page-template-member-basic .woocommerce-MyAccount-content p a {
+    color: #014A91;
+}
+
+body.page-template-page-template-member-basic .woocommerce-MyAccount-content .woocommerce-message a.button:not(.edd-submit),
+body.page-template-page-template-member-basic .woocommerce-MyAccount-content .woocommerce-Message a.button:not(.edd-submit),
+body.page-template-page-template-member-basic button.button,
+body.page-template-page-template-member-basic a.button:not(.edd-submit) {
+    background: #1d92cd;
+    border-radius: 15px;
+    text-transform: uppercase;
+}
+
+body.page-template-page-template-member-basic .woocommerce-MyAccount-content .form-row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+    text-align: left;
+}
+
+body.page-template-page-template-member-basic .woocommerce-MyAccount-content form .form-row-last {
+    padding-left: 0px;
+}
+
+body.page-template-page-template-member-basic .woocommerce-MyAccount-content form .form-row-first {
+    padding-right: 0;
+}
+
+body.page-template-page-template-member-basic input[type="text"], 
+body.page-template-page-template-member-basic input[type="tel"], 
+body.page-template-page-template-member-basic input[type="email"], 
+body.page-template-page-template-member-basic input[type="number"], 
+body.page-template-page-template-member-basic input[type="date"], 
+body.page-template-page-template-member-basic input[type="password"], 
+body.page-template-page-template-member-basic select, 
+body.page-template-page-template-member-basic textarea, 
+body.page-template-page-template-member-basic .wpcf7-number {
+        border-color: rgba(51,51,51,0.5);
+}
+
+body.page-template-page-template-member-basic .woocommerce-MyAccount-content .woocommerce-Address {
+    max-width: 100%;
+    width: 100%;
+    float: none;
+    text-align: left;
+}
+
+body.page-template-page-template-member-basic .woocommerce-MyAccount-content .woocommerce-info {
+    padding: 2%;
+}
+
+body.search .wf-container {
+    margin: 0;
+}
+
+body.search #post-0 h1 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 25px;
+}
+
+body.search #post-0 form {
+    display: none;
+}
+
+@media screen and (max-width: 1025px) {
+
+    body.page-template-page-template-member-basic .woocommerce .woocommerce-MyAccount-navigation, 
+    body.page-template-page-template-member-basic .woocommerce .woocommerce-MyAccount-content,    
+    body.page-template-page-template-member-basic .woocommerce-account .woocommerce-MyAccount-navigation, 
+    body.page-template-page-template-member-basic .woocommerce-account .woocommerce-MyAccount-content {
+        display: block;
+        float: none;
+        width: 95%;
+        padding: 2%;
+        margin-bottom: 40px;
+        margin: 0;
+    }
+
+    body.page-template-page-template-member-basic .woocommerce-MyAccount-content .form-row {
+        margin: 0 10px;
+    }
+
+    body.page-template-page-template-member-basic form .form-row input.input-text {
+        width: 95% !important;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body.page-template-page-template-member-basic .woocommerce .woocommerce-MyAccount-navigation, 
+    body.page-template-page-template-member-basic .woocommerce-account .woocommerce-MyAccount-navigation, 
+    body.page-template-page-template-member-basic .woocommerce .woocommerce-MyAccount-content,
+    body.page-template-page-template-member-basic .woocommerce-account .woocommerce-MyAccount-content {
+        width: 100%;
+        margin: 0;
+    }
+
+    body.page-template-page-template-member-basic .main-content {
+        padding: 2% !important;
+    }
+}
+
+body.search .wf-container article,
 .graphic_blocks li {
     margin: 0 2% 20px 0;
     overflow: hidden;
@@ -458,15 +536,13 @@ body#membership-site .banner > div {
     background: #fffd;
 }
 
-.page-template-course-blog-roll .graphic_blocks li {
+.page-template-page-template-member-course-roll .graphic_blocks li {
     min-height: 475px;
     position: relative;
     margin: 0 5% 25px 0;
 }
 
-.graphic_blocks h4,
-.memberium-form form label {
-    /*font-size: 1.2rem;*/
+.graphic_blocks h4 {
     font-size: 17px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
@@ -476,21 +552,6 @@ body#membership-site .banner > div {
     margin: 1rem auto;
 }
 
-.memberium-form form label {
-    margin: 0 auto;
-    font-size: 0.9rem;
-}
-
-.memberium-form .password_change_message,
-.memberium-form .email_change_message p,
-.memberium-form > p {
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #273935;
-}
-
-
-.page-template-page-allstudents-progress .ld_course_info,
 .graphic_blocks li a {
     height: 440px;
     width: 355px;
@@ -509,43 +570,7 @@ body#membership-site .banner > div {
     height: 490px;
 }
 
-.page-template-page-allstudents-progress .ld_course_info {
-    height: 650px;
-    overflow-y: scroll;
-    padding: 1%;
-}
-
-
-dd.course_progress {
-    text-align: center;
-    border-radius: 8px;
-    height: 23px;
-    margin:15px auto 35px;
-    position: relative;
-    color: #000;
-}
-
-.page-template-course-blog-roll dd.course_progress.modules_list {
-    padding-top: 0 !important;
-}
-
-dd.course_progress div.course_progress_blue {
-    background-color: #79c140 !important;
-}
-
-dd.course_progress > span {
-    position: absolute;
-    left: 45%;
-    z-index: 10;
-    margin-top: 3px;
-}
-
-.page-template-course-blog-roll .graphic_blocks li a {
-    width: 275px;
-}
-
 .graphic_blocks .course_title {
-    /*background: #e8e8e8dd;*/
     padding: 1rem;
     min-height: 200px;
     max-height: 200px;
@@ -554,83 +579,16 @@ dd.course_progress > span {
 .page-id-54745 .graphic_blocks .course_title {
     min-height: 250px;
     max-height: 250px;
+    padding: .5rem 1rem;
 }
 
-/*.page-id-54745 .graphic_blocks .course_title h4 {
-    color: #ffffff;
-}*/
-
-#lessons_list .list-count{
-    display:none;
-}
-
-#learndash_complete_prerequisites > a,
-#lessons_list>div h4>a,
-.learndash .learndash_topic_dots.type-list a>span{
-    line-height:1.4em;
-    font-family:Roboto, sans-serif;
-    font-size:15px;
-    color:#4b4b4b;
-}
-
-.learndash .notcompleted{
-    background:none;
-}
-
-#learndash_lessons{
-    border:none;
-    background:none;
-}
-
-#learndash_back_to_lesson {
-    display: none;
-}
-
-.learndash_topic_dots {
-    display: none;
-}
-
-.learndash_post_sfwd-topic h5 {
-    text-transform: uppercase;
-    margin: 4% 0;
-}
-
-#course_list > div h4 > a,
-#lessons_list > div h4 > a,
-#quiz_list > div h4 > a {
-    padding-right: 0;
-}
-
-.learndash .completed {
-    background-image: none !important;
-}
-
-.learndash .completed:after {
-    content: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABfUlEQVQ4jYXTOWuWQRQF4MePzwVE/QFRCBKtLcSlck0ZTBXEQhAVLLS201ax1EJxKcUICdpoEddGURCsxcItdoILiljJgfuGIb6YAwMzd+65c+fMmWVn7k1YhB04hnGM1NY8HuAanrfpg2a+FjfxEL9wBBtrZP4Tc7iFdR1p2JAfF3FzndjiAx7hXBV4gt341nVwucj7esgtPmM/fuBK18F2TGIT/vyHHBzGDA7iDXYOSrDrS5wcnMIFLK9OboQ7KLXvLkHehfOYwteK3cl1BvVUb5vkLVjTrDfgNk7jaRMPZ2ToXyRxNQ5gJWZxHxf7WhvW3cfwrmIn8QpnMVqxEz3ciD4/LHNMltOCL7V+Vs+1Fb97CqTDuRS4WsaIST7V5mtMlGAfe8jR7Sj2RsSXpeg0VjRJsXSushjJiRvzci86J+aO6SZ2Xt8nViF7sfSqTpeuwPfyw/ty2KWybETMyDyx7OVfxPLhLHymrsghbMPx+rrtd47Ye9L2AgN/ASsKVHuSUf6hAAAAAElFTkSuQmCC);
-    vertical-align: middle;
-    float: right;
-    margin-top: 2px;
-}
-
-.learndash .completed:hover,
-#learndash_lessons h4>a.completed:hover{
-    /*Didn't have time to finish slicing, this needs to get swapped out with the circle checkmark icon from the mockup we've got*/
-    /*background:green;*/
-}
-
-#learndash_course_content .learndash_topic_dots ul>li:nth-of-type(odd),
-#learndash_course_content .learndash_topic_dots ul>li:hover,
-#learndash_course_content .learndash_topic_dots ul>li,
-#learndash_lessons h4>a:hover{
-    background:none;
-}
-
-#lessons_list>div h4{
-    background:none;
-}
-
-.learndash .topic-notcompleted span{
-    background:none;
+.page-id-54745 .graphic_blocks .course_title h4 {
+    height: 200px;
+    overflow: hidden;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
 }
 
 .course_list_wrapper{
@@ -698,9 +656,7 @@ dd.course_progress > span {
 }
 
 .gb_top_image {
-    /*background: url(http://fixyourfrontdesk.com/wp-content/themes/frontofficeguru/images/FYFD-dashboard-module.png) 0 0 no-repeat;*/
     height: 240px;
-    /*width: 340px;*/
     width: 250px;
     display: block;
 }
@@ -726,12 +682,10 @@ dd.course_progress > span {
 }
 
 .gb_icon {
-    /*border: 4px dashed #79c140;*/
     display: block;
     height: 45px;
     width: 100px;
     margin: -60px auto 0;
-    /*border-radius: 50%;*/
 }
 
 .gb_mastermind .gb_icon {
@@ -766,11 +720,6 @@ dd.course_progress > span {
     height: 125px;
 }
 
-.list_child_users table td a > input[type=button],
-.memberium-subscription-list a,
-.memberium-form form input[type="submit"],
-#learndash_mark_complete_button,
-#learndash_next_prev_link > a,
 .gb_button {
     text-align: center;
     display: block;
@@ -798,217 +747,34 @@ dd.course_progress > span {
     border: 2px solid #9dbe42; 
 }
 
-#learndash_next_prev_link > a  {
-    padding: 10px;
-    background-color: #1ca1ff;
-    border: 2px solid #1ca1ff;
-}
-
-.memberium-form form input[type="submit"] {
-    max-width: 100%;
-}
-
-.memberium-subscription-list a {
-    background-color: #79c140 !important;
-    margin: 0;
-    padding: 5px 10px;
-    max-width: 250px;
-}
-
-.memberium-form form input[value="Disconnect"],
-.list_child_users table td a > input[type=button] {
-    max-width: 100%;
-    font-size: 1rem;
-}
 
 
 
-.memberium-form form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    line-height: 0;
-}
-
-.memberium-form form input::-moz-placeholder { /* Firefox 19+ */
-    line-height: 0;
-}
-
-.memberium-form form input:-ms-input-placeholder { /* IE 10+ */
-    line-height: 0;
-}
-
-.memberium-form form input:-moz-placeholder { /* Firefox 18- */
-    line-height: 0;
-}
-
-.memberium-form select:not([size]):not([multiple]) {
-    width: 100%;
-}
-
-.billing_history {
-    margin-top: 150px;
-    padding-left: 2%;
-    width: 85%;
-}
-
-.billing_history form {
-    margin-bottom: 4%;
-    background-color: #f6f6f6;
-    margin-top: 4%;
-    box-shadow: 0px 0px 8px 5px rgba(209,209,209,1);
-    -webkit-box-shadow: 0px 0px 8px 5px rgba(209,209,209,1);
-    -moz-box-shadow: 0px 0px 8px 5px rgba(209,209,209,1);
-    border: 1px solid #d1d1d1;
-}
-
-.billing_history table {
-    margin:0 auto 60px;
-}
-
-.billing_history form > table,
-.memberium-subscription-list div {
-    margin: 0 auto;
-    width: 90%;
-}
-
-.memberium-subscription-list div {
-    margin: 25px auto;
-}
-
-.billing_history table td {
-    line-height: 1.4em;
-    font-family: Roboto, sans-serif;
-    font-size: 15px;
-    color: #4b4b4b;
-    border:none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 2%;
-    border-top: 1px solid #dddddd;
-}
-
-.billing_history .list_child_users table td {
-
-}
-
-.billing_history table tr:first-of-type td {
-    border-top: none;
-}
-
-.billing_history table h3,
-.billing_history > h4 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: #4b4b4b;
-}
-
-.billing_history .list_child_users form {
-    box-shadow: none;
-    border: none;
-}
-
-.memb-default-cta-btn:hover, .memberium-form input[type=submit]:hover, .memberium-form button:hover, .memberium-subscription-list input[type=submit]:hover {
-    filter: brightness(100%);
-    opacity: 1;
-}
-
-@media screen and (max-width: 1200px) {
-    #learndash_next_prev_link > a {
-        font-size: 1rem;
-        padding: 7px;
-    }
-
-    .billing_history table {
-        display: grid;
-    }
-
-    .billing_history table tbody tr {   
-        display: grid;
-        width: 70%;
-        margin: 0 auto;
-    }
-
-    .billing_history table tbody tr:first-child {   
-        display: none;
-    }
-
-    .page-id-1649 .billing_history table tbody tr:first-child,
-    .page-id-6995 .billing_history table tbody tr:first-child {   
-        display: grid;
-    }
-
-    .billing_history .list_child_users table td:first-child {
-        border-top: none;
-    }
-
-    .page-id-1649 table thead {
-        display: inline-flex;
-        width: 30%;
-    }
-
-    .page-id-1649 table tbody {
-        display: inline-flex;
-        width: 65%;
-    } 
-
-    .page-id-1649 .billing_history table {
-        display: flex;
-    }
-
-    .page-id-1649 .billing_history table thead tr {
-        display: grid;
-        width: 100%;
-    }    
-
-    .page-id-1649 .billing_history table tbody tr {
-        width: 90%;
-    }  
-
-    .page-id-1649 .billing_history table tr:first-of-type td {
-        width: auto;
-    } 
-
-    .memberium-subscription-list a {
-        margin: 0 auto;
-    }
-}
 
 @media screen and (max-width: 901px) {
     body#membership-site .main-content {
         padding: 4% 0 0 1%;
     }
 
-    .billing_history {
-        margin: 150px auto;
-        padding: 0;
+    body.page-template-page-template-member-basic .main-content {
+        padding: 2% !important;
     }
-
-    .enroll_child_user {
-        margin: 0 auto;
-    }
-
 
 }
 
 @media screen and (max-width: 500px) {
-    #learndash_next_prev_link {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #learndash_next_prev_link > a {
-        margin-bottom: 2%;
-        width: 300px;
-    }
 
     .banner > div > a {
         max-width: 100%;
     }
 
-/*    .graphic_blocks li a {
-        width: 100%;
-    }*/
+    body#membership-site .logo {
+        width: 200px;
+    }
 
+    body#membership-site .sidebar-footer {
+        padding: 15px !important;
+    }
 }
 
 
@@ -1016,26 +782,6 @@ dd.course_progress > span {
     padding: 5px 15px;
     margin: initial;
 }
-
-/*#ld_course_info #course_progress_details span.learndash-profile-course-title, #ld_course_info #course_progress_details span.learndash-profile-course-access-label  {
-  display: block;
-}
-
-#ld_course_info #course_progress_details span.learndash-profile-course-title {
-  font-size: 110%;
-}
-
-#ld_course_info #course_progress_details span.leardash-course-status-not-started {
-   color:#c14a41;
-}
-
-#ld_course_info #course_progress_details span.leardash-course-status-in-progress {
-   color: #126fa0;
-}
-
-#ld_course_info #course_progress_details  span.learndash-profile-course-access-label {
-opacity: 0.6;
-}*/
 
 [tabindex="-1"]:focus {
     outline: 0 !important;
@@ -8541,8 +8287,8 @@ button.bg-dark:focus {
         -ms-flex-item-align: center !important;
         align-self: center !important;
     }
-
-    .align-self-sm-baseline {
+}
+/*    .align-self-sm-baseline {
         -ms-flex-item-align: baseline !important;
         align-self: baseline !important;
     }
@@ -8550,8 +8296,7 @@ button.bg-dark:focus {
     .align-self-sm-stretch {
         -ms-flex-item-align: stretch !important;
         align-self: stretch !important;
-    }
-}
+    }*/
 
 @media (min-width: 768px) {
     .flex-md-row {
@@ -11046,6 +10791,16 @@ button.bg-dark:focus {
 
     .mb-lg-auto,
     .my-lg-auto {
+        margin-top: auto !important;
+    }
+
+    .mr-lg-auto,
+    .mx-lg-auto {
+        margin-right: auto !important;
+    }
+
+    .mb-lg-auto,
+    .my-lg-auto {
         margin-bottom: auto !important;
     }
 
@@ -11581,7 +11336,7 @@ button.bg-dark:focus {
 
 @media (max-width: 1350px) {
 
-    body#membership-site .banner > div > img{
+    body#membership-site .banner img{
         width: 100%;
     }
 
@@ -11607,6 +11362,7 @@ button.bg-dark:focus {
         display: block;
         margin: 2rem auto;
     }
+
     body#membership-site .banner > div {
         width: 100%;
         text-align: center;
@@ -11614,7 +11370,7 @@ button.bg-dark:focus {
         padding: 0 2rem;
     }
 
-    body#membership-site .banner > div > a {
+    body#membership-site .banner > div a {
         margin: 1rem auto;
     }
 

@@ -12,24 +12,22 @@ get_header('membership');
 		<p>Welcome to the Better Than Success Dashboard. Let's get started!</p>
 	</div>
 
-	<?php
-		// if(memb_hasAnyTags(array('139'))) {
-	?>
-
-		<div class="banner">
-			<div>
-				<img src="https://betterthansuccess.com/wp-content/uploads/2020/08/BTS_mastermind.png">
-			</div>
-			<div><h3>Upcoming Events</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-				<a href="#">Register Today!</a>
-			</div>
+	<div class="banner">
+		<div>
+			<!-- <img src="https://betterthansuccess.com/wp-content/uploads/2020/08/BTS_mastermind.png"> -->
+			<?php if ( is_active_sidebar( 'guw_upcoming_events-img-sidebar' ) ) : ?>
+			    <?php dynamic_sidebar( 'guw_upcoming_events-img-sidebar' ); ?>
+			<?php endif; ?>			
 		</div>
-
-	<?php
-		// }
-	?>
-
+		<div>
+<!-- 			<h3>Upcoming Events</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> -->
+			<!-- <a href="#">Register Today!</a> -->
+			<?php if ( is_active_sidebar( 'guw_upcoming_events-sidebar' ) ) : ?>
+			    <?php dynamic_sidebar( 'guw_upcoming_events-sidebar' ); ?>
+			<?php endif; ?>
+		</div>
+	</div>
 
 	<div>
 		<ul class="graphic_blocks gb_ads">

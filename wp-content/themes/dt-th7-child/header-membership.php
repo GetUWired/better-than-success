@@ -67,14 +67,14 @@
                 vertical-align: middle;
             }
 
-            .tech_support a.messages:before {
+            .tech_support a.support:before {
                 content: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAB6UlEQVQ4jZXUS4iOYRQH8N/MfHIpt8YC5TJWSFhhMpFZsZB7yQYLUrKcjZW9DYqd64oiLDRRRC5lYYGi5NLkErnkmvulU+erp7dvvhn/envf3nPO/znnf855WhZ3r1ZgOLZjPWZhqMb4iQc4gb34WPeqFe6zcRqTcQbHSscKRmABdmIbIqubJeF0XMVTzMG9fohKHMAuHMelPOBuK1oz9VdYOEiyOh6jO9/BUYsMN2S58/EhHYdhcxMNv+MwvuEzNuJWcEVTzmUzuouAmSlBWz+Ev9GZjanjYhwQGc7D7kpAlN3+H6UHLqAnCMfhRcU4BYeaZPgry3xe/Ivv9iD8hNGVgC8p9JB+CEPDr5V/YyIuCO+gC/sL45sciZIwDn7bpOSu+tjEMK/EhMI4F8/wpHgeNSGL2BU4G10elUGXsRZ/U7vOyia9y2qqaMEpLEFHLddrK05mt3tyLK41yaiOkGQfVmEd3rdN7ZgRtvs51KHbIjzMNawi9nwsxmM5jmApduCoXLs69mAZJuE6NhW2kehFX8oTCRzM5nWWDa1VMjifF0VfjkFgImKbpqU0r1PP2JKX1RKqhIE/qaFcwd70CyluDyRqWXIVMVc3smlxNQ1INhDhmrxBgrhRgxqiUcmB2Igr2IIfgyWDfzzhbx2l3pC2AAAAAElFTkSuQmCC");
                 margin: 0.6rem;
                 line-height: 1;
                 vertical-align: middle;                
             }
 
-            .tech_support a.support:before {
+            .tech_support a.messages:before {
                 content: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAATCAYAAACgADyUAAAAz0lEQVQ4je3TMUuCURSH8V/R1BA5ZURQfQtxEF5XJ/sOLe19gaY+QbOj0OYoOomj4BSEIDhJRDSES1Zy47yFNPQ21wNnuHCeey/n/u9GLWs+4BxtXxyjHlXFIZYY4RqtJL4j1QQLlLGHFwzRxy220cApOltxxgBd7GCOcUgL67RwgatcvMOlYtynrs2Czd/4C2I+1SNk8ValWJ9EEA6wG32PEYRPMYuUJF4xwzRC0cMT3rCPSgpMLp7hJnZ7/s1Vl7FrYf4D8IOYpvnxVQqDFc/YK0peXHOQAAAAAElFTkSuQmCC");
                 margin: 0.6rem;
                 line-height: 1;
@@ -188,8 +188,8 @@
                 ?>
                 <div class="line"></div>
                 <div class="tech_support">
-                    <a class="messages" href="#">Messages</a>
-                    <a class="support" href="#">Support</a>
+                    <a class="messages" href="<?php get_template_directory_uri(); ?>/member-account">My Account</a>
+                    <a class="support" href="<?php get_template_directory_uri(); ?>/contact-us">Support</a>
                 </div>
 
             </div><!--menu-->

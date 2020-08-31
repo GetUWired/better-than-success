@@ -34,7 +34,7 @@ $content = $current_post->post_content;
         <h3>Newsletter</h3>
 
         <div class="post-title main-title">
-            <p style="display: block;"><a href="<?php get_template_directory_uri(); ?>/member-dashboard">Dashboard > </a><a href="<?php get_template_directory_uri(); ?>/bts-members-newsletter">Newsletter > </a><?php echo $title;?>
+            <p style="display: block;"><a href="<?php get_template_directory_uri(); ?>/membership-dashboard">Dashboard > </a><a href="<?php get_template_directory_uri(); ?>/bts-members-newsletter">Newsletter > </a><?php echo $title;?>
         	</p>
         </div>
 

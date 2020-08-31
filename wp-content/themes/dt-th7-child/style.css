@@ -11,3 +11,19 @@ License URI: License.txt
 Tags: multipurpose, responsive, retina ready, SEO ready, mobile friendly, iOS, material design, clean, minimal, business, corporate, portfolio, creative, photography, one page site, micro site
 Text Domain: the7mk2child
 */
+
+.main-nav > li > a {
+	margin: 10px 14px !important;
+}
+
+.main-nav > li.menu-item-45824 > a {
+	border: 3px solid #f2cb23;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.wf-container {
+	margin: 0;
+}
+
+

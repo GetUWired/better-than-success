@@ -9,7 +9,7 @@ get_header('membership');
 
 <div class="main-content">
     <div class="title">
-        <h3>My Courses</h3>
+        <h3>BTS Mastermind and Lecture Recordings</h3>
         <div class="post-title main-title">
             <p style="display: block;"><a href="<?php get_template_directory_uri(); ?>/membership-dashboard"> > Dashboard</a></p>
         </div>    
